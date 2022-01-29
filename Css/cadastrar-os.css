@@ -1,0 +1,363 @@
+@media (min-width: 1200px){
+    .box-cadastro-os{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-form-cadastro-os{
+        width: 80%;
+        height: auto;
+        margin-top: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        border-radius: 20px;
+        background-color: #008189;
+    }
+
+    .form-cadastro-os{
+        width: 90%;
+        height: 90%;
+        margin: 5vh;
+        font-size: 1.5em;
+    }
+
+    .form-cadastro-os>label{
+        margin-right: 1%;
+    }
+
+    .form-cadastro-os>select{
+        margin-right: 1%;
+        margin-bottom: 2vh; 
+        font-size: 0.7em;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .icon-add-cliente{
+        width: 30px;
+        height: 4vh;
+        vertical-align: middle;
+        margin-right: 2%;
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .icon-add-cliente>a{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    a>img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .form-cadastro-os>[type=number], .form-cadastro-os>[type=text], select{
+        height: 25px;
+        margin: initial;
+        margin-right: 2%;
+        margin-bottom: 2vh;
+        padding: 0 10px;
+        font-size: 0.7em;
+        border: none;
+        border-radius: 5px;
+    }
+
+    input[type=number]{
+        width: 8%;
+    }
+
+    #num-celular, #num-whatsapp{
+        width: 25%;
+    }
+
+    hr{
+        width: 100%;
+        height: 1px;
+        border: 0;
+        border-top: 1.5px solid #ffffff;
+    }
+
+    .form-cadastro-os>h3{
+        width: 15%;
+        margin: 0 auto;
+        margin-bottom: 2vh;
+    }
+
+    #equipamento{
+        width: 17%;
+    }
+
+    #marca{
+        width: 18%;
+    }
+
+    #modelo{
+        width: 18%;
+    }
+
+    .box-descricoes-cados{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .box-textarea-informacoes-cados{
+        width: 240px;
+    }
+
+    .box-textarea-informacoes-cados>textarea{
+        width: 200px;
+        padding: 10px 10px;
+        font-size: 0.8em;
+        resize: none;
+        border-radius: 8px;
+    }
+
+    .resposta-servidor-cados{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resposta-servidor-cados>p{
+        margin: initial;
+        font-size: 0.8em;
+        color: #880404;
+    }
+
+    .buttons{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-form-os{
+        width: 160px;
+        height: 40px;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 5px;
+        background-color: #08aeb9;
+        cursor: pointer;
+    }
+
+    .btn-form-os:hover{
+        box-shadow: 0px 0px 20px 5px #015f66;
+    }
+
+    #btn-salvar-os{
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .box-cadastro-os, .box-form-cadastro-os, .form-cadastro-os, .box-descricoes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    hr{
+        width: 100%;
+        border: 0;
+        border: 0.5px solid #ffffff;
+    }
+    
+    .box-cadastro-os{
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .box-form-cadastro-os{
+        width: 78%;
+        height: auto;
+        margin-top: 6vh;
+        justify-content: center;
+        align-content: center;
+        border-radius: 20px;
+        background-color: #008189;
+    }
+
+    .form-cadastro-os{
+        width: 90%;
+        height: auto;
+        margin: 5vh 0;
+        flex-wrap: wrap;
+    }
+
+    .form-cadastro-os>label, .box-textarea-informacoes-cados>label{
+        margin: initial;
+        margin-right: 0.5%;
+        font-size: 1.3em;
+        justify-content: left;
+        align-content: flex-start;
+    }
+
+    #num-os{
+        width: 8%;
+    }
+
+    .style-data-os{
+        margin: initial;
+        padding: 3px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 2vh;
+    }
+
+    .style-data-os{
+        height: 25px;
+        padding: 0 10px;
+    }
+
+    .form-cadastro>input[type=number]{
+        width: 50px;
+        margin-right: 1.5%;
+        padding: 0 10px;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .style-data-os{
+        margin-right: 1.5%;
+    }
+
+    .form-cadastro-os>select{
+        height: 25px;
+        margin-right: 1.5%;
+    }
+
+    .icon-add-cliente{
+        width: 24px;
+        height: 24px;
+        margin-right: 2.5%;
+    }
+
+    .icon-add-cliente>a{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    a>img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    #num-celular, #num-whatsapp{
+        width: 23%;
+    }
+
+    #equipamento, #marca{
+        width: 25%;
+    }
+
+    #modelo{
+        width: 30%;
+    }
+
+    h3{
+        display: none;
+    }
+    
+    .box-descricoes-cados{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .box-textarea-informacoes-cados{
+        width: 195px;
+        margin-right: 2%;
+    }
+
+    .box-textarea-informacoes-cados>label{
+        font-size: 1.2em;
+    }
+
+    .box-textarea-informacoes-cados>textarea{
+        width: 93%;
+        height: 90px;
+        padding: 10px 10px;
+        font-size: 1.2em;
+        resize: none;
+        border-radius: 8px;
+    }
+
+    .resposta-servidor-cados{
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resposta-servidor-cados>p{
+        margin: initial;
+        font-size: 1.2em;
+        color: #880404;
+    }
+
+    .buttons{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-form-os{
+        width: 150px;
+        height: 40px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #08aeb9;
+        cursor: pointer;
+    }
+
+    .btn-form-os:hover{
+        box-shadow: 0px 0px 20px 5px #015f66;
+    }
+
+    #btn-salvar-os{
+        margin-right: 5%;
+    }
+}

@@ -1,0 +1,95 @@
+.container-cliente{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.box-cliente{
+    width: 50%;
+    height: 300px;
+    margin-top: 150px;
+    background-color: #008189;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.form-altera-cliente{
+    width: 70%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-altera-cliente-row>label{
+    margin-right: 1%;
+    font-size: 1.5em;
+}
+
+.form-altera-cliente-row{
+    width: 100%;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.form-altera-cliente-row>input{
+    height: 25px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-altera-cliente-row>input:focus{
+    outline: 0;
+}
+
+#id-cliente{
+    width: 13%;
+}
+
+#cpf-cnpj{
+    width: 69.5%;
+}
+
+.form-buttons-altera-cliente{
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-form-altera-cliente{
+    width: 140px;
+    height: 40px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    background-color: #08aeb9;
+    cursor: pointer;
+}
+
+
+.btn-form-altera-cliente:hover{
+    box-shadow: 0px 0px 20px 5px #015f66;
+}
+
+#btn-salvar-altera-cliente{
+    margin-right: 5%;
+}
+
+#btn-voltar-cliente{
+    width: 100%;
+    height: 100%;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    background-color: #08aeb9;
+    cursor: pointer;
+}
+

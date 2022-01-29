@@ -1,0 +1,223 @@
+@media only screen and (min-width: 1200px){
+    .box-cadastro-cliente{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-form-cliente{
+        width: 60%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #008189;
+    }
+
+    .form-cliente{
+        width: 65%;
+        margin: 40px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    .form-cliente>label{
+        margin: initial;
+        margin-right: 1.5%;
+        margin-bottom: 10px;
+        font-size: 1.4em;
+    }
+
+    .form-cliente>input{
+        height: 20px;
+        margin: initial;
+        margin-right: 2.5%;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    #nome-cliente{
+        width: 80%;
+    }
+
+    #cpf-cnpj{
+        width: 71.5%;
+    }
+
+    #num-casa{
+        width: 50px;
+    }
+
+    #rua{
+        width: 165px;
+    }
+
+    .resposta-servidor-cliente{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resposta-servidor-cliente>p{
+        margin: initial;
+        font-size: 1.2em;
+        color: #880404;
+    }
+
+    .buttons{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-form-cliente{
+        width: 160px;
+        height: 40px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #08aeb9;
+    }
+
+    .btn-form-cliente:hover{
+        box-shadow: 0px 0px 20px 5px #015f66;
+    }
+
+    #btn-salvar-cliente{
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .box-cadastro-cliente{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-form-cliente{
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #008189;
+    }
+
+    .form-cliente{
+        width: 65%;
+        margin: 40px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+    .form-cliente>label{
+        margin: initial;
+        margin-right: 1.5%;
+        margin-bottom: 10px;
+        font-size: 1.3em;
+    }
+
+    .data-cliente{
+        height: 16px;
+        margin: initial;
+        margin-right: 2.5%;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #nome-cliente{
+        width: 75%;
+    }
+
+    #cpf-cnpj{
+        width: 66%;
+    }
+
+    /*#num-casa{
+        width: 50px;
+    }
+
+    #rua{
+        width: 165px;
+    }
+
+    #bairro{
+        width: 132px;
+    }*/
+
+    .resposta-servidor-cliente{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resposta-servidor-cliente>p{
+        margin: initial;
+        font-size: 1.2em;
+        color: #880404;
+    }
+
+    .buttons{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-form-cliente{
+        width: 160px;
+        height: 40px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #08aeb9;
+    }
+
+    .btn-form-cliente:hover{
+        box-shadow: 0px 0px 20px 5px #015f66;
+    }
+
+    #btn-salvar-cliente{
+        margin-right: 5%;
+    }
+}

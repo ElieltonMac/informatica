@@ -1,0 +1,297 @@
+@media screen and (min-width: 360px) and (max-width: 580px){
+    body{
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-family: "lato", sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .header{
+        width: 100%;
+        height: 5vh;
+        z-index: 1;
+        box-shadow: 2px 5px 50px 5px #302e2e;
+        background-color: #009189;
+    }
+
+    #side-bar-1{
+        display: none;
+    }
+
+    #side-bar-2{
+        width: 100%;
+        height: 105vh;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: absolute;
+        align-content: flex-start;
+        background-color: #009189;
+    }
+
+    .icon-cad-user{
+        width: 100%;
+        height: 128px;
+        margin-top: 12vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .icon-cad-user-desktop{
+        display: none;
+    }
+
+    .img-cad-user-smartphone{
+        width: 128px;
+        height: 128px;
+    }
+
+    .icon-cad-user-desktop{
+        display: none;
+    }
+
+    .presentation{
+        width: 100%;
+        height: 7vh;
+        margin: 5vh auto 5vh auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .presentation>p{
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: initial;
+        color: #54dad3;
+    }
+
+    .formulario{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .input-data{
+        width: 80%;
+        height: 155px;
+        margin-bottom: 20px; 
+    }
+
+    .user-data{
+        width: 93%;
+        height: 45px;
+        margin-bottom: 10px;
+        border: none;
+        padding: 0 10px;
+        font-size: 1.1em;
+        border-radius: 10px;
+    }
+
+    .resposta{
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .resposta>p{
+        margin: initial;
+        color: #ff0000;
+        border: none;
+        text-shadow: 0.1em 0.1em 0.4em #302e2e;
+    }   
+
+    .box-send{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-form{
+        width: 80%;
+        height: 45px;
+        margin-bottom: 7px;
+        border: none;
+        background-color: #54dad3;
+        color: #009189;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1024px){
+    body{
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-family: "lato", sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .header{
+        width: 100%;
+        height: 5vh;
+        z-index: 1;
+        box-shadow: 2px 5px 50px 5px #302e2e;
+        background-color: #009189;
+    }
+
+    #side-bar-2{
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+    }
+
+    .icon-cad-user{display: none;}
+
+    .icon-cad-user-desktop{
+        width: 100%;
+        height: 23vh;
+        margin-top: 7vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-cad-user-desktop{
+        width: 12%;
+        height: 100%;
+    }
+
+    .presentation{
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .presentation>p{
+        margin: initial;
+        font-size: 3em;
+        font-weight: bold;
+        color: #54dad3;
+        text-shadow: 2px 5px 50px 5px #302e2e;
+    }
+
+    .formulario{
+        width: 50%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: #009189;
+    }
+
+    .input-data{
+        width: 80%;
+        height: 160px;
+        margin: 15px auto  25px auto;
+    }   
+
+    .user-data{
+        width: 96%;
+        height: 40px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1em;
+    }
+
+    .resposta{
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .resposta>p{
+        margin: initial;
+        color: #c90707;
+        text-shadow: 0.1em 0.1em 0.4em #302e2e;
+    }   
+
+    .box-send{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+
+    .btn-form{
+        width: 39%;
+        height: 40px;
+        border: none;
+        background-color: #54dad3;
+        color: #009189;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    #btn-send{
+        margin-right: 1%;
+    }
+
+    #btn-cancel{
+        margin-left: 1%;
+    }
+
+    .btn-form:hover{
+            box-shadow: 5px 10px 50px 5px #302e2e;
+    }
+}

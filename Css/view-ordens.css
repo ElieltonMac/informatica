@@ -1,0 +1,326 @@
+@media only screen and (min-width: 1200px){
+    .box-modeling-order{
+        width: 100%;
+        height: 40px;
+        margin-top: 9vh;
+        display: flex;
+        justify-content: right;
+    }
+    
+    .box-icons{
+        width: 10%;
+        height: 100%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .box-icons>a{
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-modeling-order{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .container-search-os{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .form-search-os{
+        width: 45%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #input-search-os{
+        width: 85%;
+        height: 28px;
+        padding: 5px 15px;
+        font-size: 1em;
+        border: 1px solid #ddd;
+        border-radius: 0;
+    }
+
+    #btn-search-os{
+        width: 10%;
+        height: 40px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .box-filtros, .list-orders{
+        margin-top: 3vh;
+        border: none;
+        border-radius: 20px;
+    }
+    
+    .box-filtros{
+        width: 20%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #16b9c5;
+    }
+
+    .filtros{
+        width: 85%;
+        height: 20vh;
+        margin-top: 3vh;
+    }
+    
+    .filtros>label, .filtros>p{
+        font-size: 1.1em;
+    }
+
+    .filtros>select{
+        height: 25px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .list-orders{
+        width: 75%;
+        min-height: 400px;
+        padding-top: 3vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #008189;
+    }
+
+    .list-orders>a{
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .order{
+        width: 192px;
+        height: 260px;
+        margin-bottom: 3vh; 
+        margin-right: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        border-radius: 10px;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+
+    .order:hover{
+        box-shadow: 0 0 20px 5px #016970;
+    }
+
+    .box-foto-equipamento{
+        width: 98%;
+        height: 52%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .img-equip{
+        width: 60%;
+        height: 98%;
+    }
+
+    .box-foto-equipamento>input{
+        width: 15px;
+        height: 15px;
+    }
+
+    .box-desc-os{
+        width: 85%;
+        height: 35%;
+        padding: 6% 4%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-content: center;
+        border: 1px solid #2e2e2e;
+        border-radius: 10px;
+    }
+
+    .box-desc-os>p{
+        width: 100%;
+        margin: initial;
+        margin-bottom: 5px;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .box-modeling-order{
+        width: 100%;
+        height: 35px;
+        margin-top: 10vh;
+        display: flex;
+        justify-content: right;
+        align-content: center;
+    }
+
+    .box-icons{
+        width: 12%;
+        height: 100%;
+        margin-right: 2%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .box-icons>a{
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon-modeling-order{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .container-search-os{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .form-search-os{
+        width: 50%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #input-search-os{
+        width: 89%;
+        height: 26px;
+        padding: 5px 15px;
+        border: 1px solid #ddd;
+        font-size: 1em;
+    }
+
+    #input-search-os:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+
+    #btn-search-os{
+        width: 10%;
+        height: 38px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .box-filtros, .list-orders, .order, .box-foto-equipamento, .box-desc-os{
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .box-filtros{
+        width: 210px;
+        height: 30vh;
+        justify-content: center;
+        align-content: center;
+        background-color: #16b9c5;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 20vh;
+    }
+
+    .filtros>select{
+        height: 25px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .filtros>label, .filtros>p{
+        font-size: 1.1em;
+    }
+
+    .list-orders{
+        width: 75%;
+        min-height: 300px;
+        padding-top: 1vh;
+        justify-content: space-around;
+        background-color: #008189;
+    }
+
+    .list-orders>a{
+        text-decoration: none;
+        color: #000000;;
+    }
+
+    .order{
+        width: 190px;
+        height: 250px;
+        margin-bottom: 1vh;
+        margin-right: 7px;
+        justify-content: center;
+        align-content: flex-start;
+        vertical-align: top;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+
+    .box-foto-equipamento{
+        width: 98%;
+        height: 52%;
+        margin: initial;
+        margin-bottom: 10px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .img-equip{
+        width: 60%;
+        height: 98%;
+    }
+
+    .box-foto-equipamento>input{
+        width: 15px;
+        height: 15px;
+    }
+
+    .box-desc-os{
+        width: 80%;
+        height: 37%;
+        margin: initial;
+        padding: 5px 10px;
+        justify-content: flex-start;
+        align-content: center;
+        border: 1px solid #2e2e2e;
+        border-radius: 6px;
+    }
+
+    .box-desc-os>p{
+        width: 100%;
+        margin: initial;
+        margin-bottom: 4px;
+    }
+}

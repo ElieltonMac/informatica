@@ -1,0 +1,352 @@
+@media screen and (min-width: 360px) and (max-width: 580px){
+    body{
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-family: "lato", sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .header{
+        width: 100%;
+        height: 5vh;
+        z-index: 1;
+        box-shadow: 2px 5px 50px 5px #302e2e;
+        background-color: #009189;
+    }
+
+    .side-bar{
+        width: 100%;
+        height: 100vh;
+    }
+
+    #side-bar-1{
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+    }
+
+    .user{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 30vh;
+        margin-top: 17%; 
+    }   
+
+    .img-user{
+        width: 30%;
+        height: 95%;
+    }
+
+    .opcoes-user{
+        width: 65%;
+        height: 150px;
+        margin: initial;
+        font-size: 1.1em;
+        text-align: center;
+        color: #009189;
+    }
+
+    #side-bar-2{
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        background-color: #009189;
+    }
+
+    .icon-user{
+        width: 100%;
+        height: 128px;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .img-user{
+        width: 128px;
+        height: 128px;
+    }
+
+    .ident-func{
+        width: 100%;
+        height: 7vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-login{
+        margin: initial;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #54dad3;
+        text-shadow: 2px 5px 50px 5px #302e2e;
+    }
+
+    .formulario{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .input-data{
+        width: 65%;
+        height: 95px;
+        margin-bottom: 35px;
+    }   
+
+    .user-data{
+        width: 93%;
+        height: 45px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        border: none;
+        font-size: 1.1em;
+        border-radius: 10px;
+    }
+
+    .resposta{
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .resposta>p{
+        margin: initial;
+        color: #ff0000;
+        border: none;
+        text-shadow: 0.1em 0.1em 0.4em #302e2e;
+    }   
+
+    .box-send{
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+    }   
+
+    .btn-send{
+        width: 65%;
+        height: 45px;
+        border: none;
+        background-color: #54dad3;
+        color: #009189;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .no-cadastro{
+        width: 100%;
+        height: 20px;
+        margin: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .no-cadastro>p{
+        margin: initial;
+    }
+
+    .no-cadastro>p>a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1024px){
+    body{
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-family: "lato", sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .header{
+        width: 100%;
+        height: 10vh;
+        z-index: 1;
+        box-shadow: 2px 5px 50px 5px #302e2e;
+        background-color: #009189;
+    }
+
+    .side-bar{
+        width: 50%;
+        height: 90vh;
+    }
+
+    #side-bar-1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+    }
+
+    .user{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 30vh;
+        margin-top: 17%; 
+    }   
+
+    .img-user{
+        width: 30%;
+        height: 95%;
+    }
+
+    .opcoes-user{
+        width: 65%;
+        height: 150px;
+        margin: initial;
+        font-size: 1.1em;
+        text-align: center;
+        color: #009189;
+    }
+
+    a{
+        text-decoration: none;
+        color: #009189;
+    }
+
+    #side-bar-2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        background-color: #009189;
+    }
+
+    .icon-user{
+        display: none;
+    }
+
+    .ident-func{
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-login{
+        font-size: 3em;
+        font-weight: bold;
+        color: #54dad3;
+        text-shadow: 2px 5px 50px 5px #302e2e;
+    }
+
+    .formulario{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .input-data{
+        width: 50%;
+        height: 95px;
+        margin-bottom: 35px;
+    }   
+
+    .user-data{
+        width: 94%;
+        height: 40px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        border: none;
+        font-size: 1.1em;
+        border-radius: 10px;
+    }
+
+    .resposta{
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .resposta>p{
+        margin: initial;
+        color: #ff0000;
+        text-shadow: 0.1em 0.1em 0.4em #302e2e;
+    }   
+
+    .box-send{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+    }   
+
+    .btn-send{
+        width: 50%;
+        height: 40px;
+        border: none;
+        background-color: #54dad3;
+        color: #009189;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .btn-send:hover{
+        box-shadow: 5px 10px 50px 5px #302e2e;
+    }
+
+    .no-cadastro{
+        display: none;
+    }
+}
+
+
+
