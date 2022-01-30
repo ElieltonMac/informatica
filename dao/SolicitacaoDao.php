@@ -67,10 +67,12 @@
             $problema_info = $os->getProblemaInfo();
             $problema_const = $os->getProblemaConst();
             $observacoes = $os->getObservacoes();
+            $status = $os->getStatus();
+            $data = $os->getDataSolicitacao();
             
             try{
                 $conexao = $this->conexaoDao->conecta();
-                $sql = "INSERT INTO solicitacao(id_solicitacao, atendente, cliente, tecnico, telefone, whatsapp, equipamento, marca, modelo, problema_info, problema_const, observacao) VALUES (:id_solicitacao, :atendente, :cliente, :tecnico, :telefone, :whatsapp, :equipamento, :marca, :modelo, :problema_info, :problema_const, :observacao)";
+                $sql = "INSERT INTO solicitacao(id_solicitacao, atendente, cliente, tecnico, telefone, whatsapp, equipamento, marca, modelo, problema_info, problema_const, observacao, estado, data_solicitacao) VALUES (:id_solicitacao, :atendente, :cliente, :tecnico, :telefone, :whatsapp, :equipamento, :marca, :modelo, :problema_info, :problema_const, :observacao, :estado, :data_solicitacao)";
                 $stmt = $conexao->prepare($sql);
                 $stmt->bindParam(":id_solicitacao", $id);
                 $stmt->bindParam(":atendente", $atendente);
@@ -84,6 +86,8 @@
                 $stmt->bindParam(":problema_info", $problema_info);
                 $stmt->bindParam(":problema_const", $problema_const);
                 $stmt->bindParam(":observacao", $observacoes);
+                $stmt->bindParam(":estado", $status);
+                $stmt->bindParam(":data_solicitacao", $data);
                 $result = $stmt->execute();
 
                 if($result){

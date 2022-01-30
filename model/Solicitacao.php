@@ -30,7 +30,7 @@
         }
 
         public function getDataSolicitacao(){
-            return $this->DataSolicitacao;
+            return $this->dataSolicitacao;
         }
 
         public function getStatus(){

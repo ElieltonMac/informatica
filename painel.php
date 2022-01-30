@@ -29,6 +29,8 @@
         $solicitacao->setProblemaInfo(strip_tags(filter_input(INPUT_POST, "problema-informado", FILTER_SANITIZE_STRING)));
         $solicitacao->setProblemaConst(strip_tags(filter_input(INPUT_POST, "problema-constatado", FILTER_SANITIZE_STRING)));
         $solicitacao->setObservacoes(strip_tags(filter_input(INPUT_POST, "observacoes", FILTER_SANITIZE_STRING)));
+        $solicitacao->setStatus(strip_tags("Entrada"));
+        $solicitacao->setDataSolicitacao(date("Y-m-d"));
 
         $retorno = $solicitacaoControl->validaOs($solicitacao);
 
