@@ -18,7 +18,10 @@
             <div class="default-flex form-buttons-altera-cliente">
                 <input type="submit" id="btn-salvar-altera-cliente" class="btn-form-altera-cliente" name="btn-altera-cliente" value="Salvar">
                 <a class="btn-form-altera-cliente" href="?pagina=lista-clientes"><input id="btn-voltar-cliente" type="button" value="Voltar"></a>
+                <input class="btn-form-altera-cliente" id="btn-excluir-cliente" type="button" name="btn-excluir-cliente" value="Excluir" onClick="excluirCliente()">
             </div>
         </form>
     </div>
 </div>
+
+<script type="text/javascript" src="/informatica/js/ajax.js"></script>

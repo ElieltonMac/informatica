@@ -1,6 +1,6 @@
 <?php
     global $ordens;
-    global $cliente;
+    $cliente;
     $ordens = $solicitacaoDao->retornaOrdens();
 ?>
 <div class="box-modeling-order">

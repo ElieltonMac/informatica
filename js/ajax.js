@@ -38,3 +38,17 @@ function excluirOrdem(){
         location.href="/informatica/painel.php?pagina=lista-ordens";
     })
 }
+
+
+var idCliente = document.getElementById("id-cliente");
+function excluirCliente(){
+    $.ajax({
+        method: "POST",
+        url: "/informatica/painel.php",
+        data: {idcliente: idCliente.value}
+    })
+    .done(function(){
+        alert("Cliente excluido com sucesso");
+        location.href="/informatica/painel.php?pagina=lista-clientes";
+    })
+}

@@ -91,5 +91,19 @@
                 echo "Erro: ". $ex->getMessage();
             }
         }
+
+        public function excluiCliente($cliente){
+            $id = $cliente->getId();
+            try{
+                $conexao = $this->conexaoDao->conecta();
+                $sql = "DELETE FROM cliente WHERE id_cliente = :id_cliente";
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindParam(":id_cliente", $id);
+                $result = $stmt->execute();
+                
+            }catch(PDOException $ex){
+                echo "Erro: ". $ex->getMessage();
+            }
+        }
     }
 ?>
