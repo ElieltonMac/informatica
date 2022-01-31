@@ -55,13 +55,13 @@
 
         public function autenticaLogin(Usuario $user){
             $user = $user->getUser();
-            //$senha = $user->getSenha();
+            $senha = $user->getSenha();
             try{
                 $conexao = $this->conexaoDao->conecta();
-                $sql = "SELECT * FROM usuario WHERE nome_usuario = :nome_usuario";
+                $sql = "SELECT * FROM usuario WHERE nome_usuario = :nome_usuario AND senha = :senha";
                 $stmt = $conexao->prepare($sql);
                 $stmt->bindParam(":nome_usuario", $user);
-                //$stmt->bindParam(":senha", $senha);
+                $stmt->bindParam(":senha", $senha);
                 $result = $stmt->execute();
 
                 $linha = $stmt->fetch();
