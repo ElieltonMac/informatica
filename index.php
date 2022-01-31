@@ -1,10 +1,10 @@
 <?php
 session_start();
-    require_once("Dao/UsuarioDao.php");
+    /*require_once("Dao/UsuarioDao.php");
     require_once("Model/Usuario.php");
     require_once("Control/UsuarioControl.php");
     $userControl = new UsuarioControl();
-    $msg = "";
+    $msg = "";*/
 
     if(filter_input(INPUT_POST, "txtEmail", FILTER_SANITIZE_STRING)){
         $usuario = new Usuario();
@@ -72,7 +72,7 @@ session_start();
                         <input class="user-data" type="text" name="txtEmail" placeholder="Usuario"><br>
                         <input class="user-data" type="password" name="txtPass" placeholder="Senha">
                 </div>    
-                <div class="resposta" id="resposta"><p><?=$msg?></p></div>          
+                <div class="resposta" id="resposta"><p></p></div>          
                 <div class="box-send">
                         <input class="btn-send" type="submit" name="btn-send" value="ENTRAR">
                     </form>
