@@ -8,16 +8,14 @@
         }
 
         public function cadastraUser(Usuario $usuario){
-            $userNome = $usuario->getNome();
-            $userEmail = $usuario->getEmail();
+            $userNome = $usuario->getUser();
             $userSenha = $usuario->getSenha();
             try{
                 $conexao = $this->conexaoDao->conecta();
 
-                $sql = "INSERT INTO usuario(nome, email, senha) VALUES (:nome, :email, :senha)";
+                $sql = "INSERT INTO usuario(nome_usuario, senha) VALUES (:nome_usuario, :senha)";
                 $stmt = $conexao->prepare($sql);
-                $stmt->bindParam(":nome", $userNome);
-                $stmt->bindParam(":email", $userEmail);
+                $stmt->bindParam(":nome_usuario", $userNome);
                 $stmt->bindParam(":senha", $userSenha);
 
                 $result = $stmt->execute();
@@ -53,9 +51,9 @@
             }
         }
 
-        public function autenticaLogin(Usuario $user){
-            $user = $user->getUser();
-            $senha = $user->getSenha();
+        public function autenticaLogin(Usuario $usuario){
+            $user = $usuario->getUser();
+            $senha = $usuario->getSenha();
             try{
                 $conexao = $this->conexaoDao->conecta();
                 $sql = "SELECT * FROM usuario WHERE nome_usuario = :nome_usuario AND senha = :senha";

@@ -86,7 +86,7 @@
                 <div class="resposta" id="resposta"><p><?=$msg?></p></div>          
                 <div class="box-send">
                         <input class="btn-form" id="btn-send" type="submit" name="btn-send" value="ENTRAR"><br>
-                        <input class="btn-form" id="btn-cancel" type="button" name="btn-cancel" value="CANCELAR" onClick="location.href='login.php'">
+                        <input class="btn-form" id="btn-cancel" type="button" name="btn-cancel" value="CANCELAR" onClick="location.href='index.php'">
                     </form>
                 </div>
         </div>
