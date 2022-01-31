@@ -7,14 +7,17 @@
 
     require_once("dao/SolicitacaoDao.php");
     require_once("dao/ClienteDao.php");
+    require_once("dao/UsuarioDao.php");
     require_once("control/SolicitacaoControl.php");
     require_once("control/ClienteControl.php");
     require_once("model/Solicitacao.php");
     require_once("model/Cliente.php");
+    
     $solicitacaoControl = new SolicitacaoControl();
     $clienteControl = new ClienteControl();
     $solicitacaoDao = new SolicitacaoDao(); 
     $clienteDao = new ClienteDao();
+    $usuarioDao = new UsuarioDao();
 
     $msg = "";
 
@@ -142,6 +145,8 @@
 
         $retorno = $clienteDao->excluiCliente($cliente);
     }
+
+
     
 ?>
 
@@ -169,6 +174,11 @@
                     <li class="option-nav-bar"><a href="" >HOME</a></li>
                     <li class="option-nav-bar"><a href="?pagina=lista-ordens">ORDENS</a></li>
                     <li class="option-nav-bar"><a href="?pagina=lista-clientes">CLIENTES</a></li>
+                    <?php 
+                        if($_SESSION["user"] == "master@master"){
+                            echo "<li class='option-nav-bar'><a href='?pagina=lista-usuarios'>USUARIOS</a></li>";
+                        }
+                    ?>
                     <li class="option-nav-bar"><a href="#">PERFIL</a></li>
                 </ul>      
             </nav>
@@ -198,6 +208,9 @@
                     break;
                     case "cliente":
                         require_once("view/cliente.php");
+                    break;
+                    case "lista-usuarios":
+                        require_once("view/lista-usuarios.php");
                     break;
                 }       
             ?>  

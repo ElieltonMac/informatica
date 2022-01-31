@@ -36,11 +36,12 @@
         }
 
         public function validaLogin(Usuario $user){
-           // if(strlen($user->getSenha()) > 7){
-                /*$pass = md5($user->getSenha());
+           if(strlen($user->getSenha()) > 7){
+                $pass = md5($user->getSenha());
                 $pass = substr_replace($pass, "e", 13, 0);
                 $pass = substr_replace($pass, "f", -3, 0);
-                $user->setSenha($pass);*/
+                $user->setSenha($pass);
+                echo $user->getSenha();
                 $result = $this->usuarioDao->autenticaLogin($user);
                 switch($result){
                     case 1:
@@ -50,9 +51,9 @@
                         return -4;
                     break;
                 }
-            /*}else{
+            }else{
                 return -3;
-            }*/
+            }
         }
     }
 ?>

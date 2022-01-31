@@ -73,5 +73,24 @@
 
             }
         }
+
+        public function retornaUsuarios(){
+            try{
+                $conexao = $this->conexaoDao->conecta();
+                $sql = "SELECT * FROM usuario";
+                $stmt = $conexao->prepare($sql);
+                $result = $stmt->execute();
+                
+                $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                if($result){
+                    return $usuarios;
+                }else{
+                    return -1;
+                }
+            }catch(PDOException $ex){
+                echo "Erro: ".$ex->getMessage();
+            }
+        }
     }
 ?>
