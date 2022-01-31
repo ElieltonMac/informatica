@@ -92,5 +92,25 @@
                 echo "Erro: ".$ex->getMessage();
             }
         }
+
+        public function retornaUsuarioSolo($id){
+            try{
+                $conexao = $this->conexaoDao->conecta();
+                $sql = "SELECT * FROM usuario WHERE nome_usuario = :usuario";
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindParam(":usuario", $id);
+                $result = $stmt->execute();
+
+                $usuario = $stmt->fetch();
+
+                if($result){
+                    return $usuario;
+                }else{
+                    return -1;
+                }
+            }catch(PDOException $ex){
+                echo "Erro: ". $ex->getMessage();
+            }
+        }
     }
 ?>

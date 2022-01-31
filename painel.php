@@ -164,6 +164,8 @@
     <link rel="stylesheet" href="css/ordem.css">
     <link rel="stylesheet" href="css/lista-clientes.css">
     <link rel="stylesheet" href="css/cliente.css">
+    <link rel="stylesheet" href="css/lista-usuarios.css">
+    <link rel="stylesheet" href="css/usuario.css">
     <script type="text/javascript" src="js/jquery-3.6.0.min"></script>
 </head>
 <body>
@@ -211,6 +213,9 @@
                     break;
                     case "lista-usuarios":
                         require_once("view/lista-usuarios.php");
+                    break;
+                    case "usuario":
+                        require_once("view/usuario.php");
                     break;
                 }       
             ?>  
