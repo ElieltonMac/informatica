@@ -1,27 +1,24 @@
 <?php
 session_start();
-    /*require_once("Dao/UsuarioDao.php");
-    require_once("Model/Usuario.php");
-    require_once("Control/UsuarioControl.php");
+    require_once("dao/UsuarioDao.php");
+    require_once("model/Usuario.php");
+    require_once("control/UsuarioControl.php");
     $userControl = new UsuarioControl();
-    $msg = "";*/
+    $msg = "";
 
-    if(filter_input(INPUT_POST, "txtEmail", FILTER_SANITIZE_STRING)){
+    if(filter_input(INPUT_POST, "txtUser", FILTER_SANITIZE_STRING)){
         $usuario = new Usuario();
 
-        $email = strip_tags(filter_input(INPUT_POST, "txtEmail", FILTER_SANITIZE_STRING));
+        $user = strip_tags(filter_input(INPUT_POST, "txtUser", FILTER_SANITIZE_STRING));
         $senha = strip_tags(filter_input(INPUT_POST, "txtPass", FILTER_SANITIZE_STRING));
-        
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $msg = "Email inválido";
-        }else{
-            $usuario->setEmail($email);
-            $usuario->setSenha($senha);
-            $result = $userControl->validaLogin($usuario);
+
+        $usuario->setUser($user);
+        $usuario->setSenha($senha);
+        $result = $userControl->validaLogin($usuario);
 
             switch($result){
                 case 1:
-                    $_SESSION["email"] = $usuario->getEmail();
+                    $_SESSION["user"] = $usuario->getUser();
 
                     header("Location: painel.php");
                 break;
@@ -32,7 +29,7 @@ session_start();
                     $msg = "Usuário ou senha incorretos";
                 break;
             }
-        }
+        
     }
 ?>
 
@@ -69,10 +66,10 @@ session_start();
             <div class="formulario">
                 <div class="input-data">
                     <form method="POST">
-                        <input class="user-data" type="text" name="txtEmail" placeholder="Usuario"><br>
+                        <input class="user-data" type="text" name="txtUser" placeholder="Usuario"><br>
                         <input class="user-data" type="password" name="txtPass" placeholder="Senha">
                 </div>    
-                <div class="resposta" id="resposta"><p></p></div>          
+                <div class="resposta" id="resposta"><p><?$msg?></p></div>          
                 <div class="box-send">
                         <input class="btn-send" type="submit" name="btn-send" value="ENTRAR">
                     </form>

@@ -1,5 +1,5 @@
 <?php
-    require_once("Dao/UsuarioDao.php");
+    require_once("dao/UsuarioDao.php");
 
     class UsuarioControl{
         private $usuarioDao;
@@ -37,11 +37,10 @@
 
         public function validaLogin(Usuario $user){
             if(strlen($user->getSenha()) > 7){
-                $pass = md5($user->getSenha());
+                /*$pass = md5($user->getSenha());
                 $pass = substr_replace($pass, "e", 13, 0);
                 $pass = substr_replace($pass, "f", -3, 0);
-                $user->setSenha($pass);
-
+                $user->setSenha($pass);*/
                 $result = $this->usuarioDao->autenticaLogin($user);
 
                 switch($result){

@@ -1,10 +1,10 @@
 <?php
-    require_once("conexaoDao.php");
+    require_once("ConexaoDao.php");
     class UsuarioDao{
-        private $connect;
+        private $conexaoDao;
 
         public function __construct(){
-            $this->connect = new ConexaoDao();
+            $this->conexaoDao = new ConexaoDao();
         }
 
         public function cadastraUser(Usuario $usuario){
@@ -12,7 +12,7 @@
             $userEmail = $usuario->getEmail();
             $userSenha = $usuario->getSenha();
             try{
-                $conexao = $this->connect->conecta();
+                $conexao = $this->conexaoDao->conecta();
 
                 $sql = "INSERT INTO usuario(nome, email, senha) VALUES (:nome, :email, :senha)";
                 $stmt = $conexao->prepare($sql);
@@ -33,13 +33,13 @@
         }
 
         public function consultaCad(Usuario $usuario){
-            $userEmail = $usuario->getEmail();
+            $user = $usuario->getEmail();
             try{
-                $conexao = $this->connect->conecta();
+                $conexao = $this->conexaoDao->conecta();
 
-                $sql = "SELECT email FROM usuario WHERE email = :email";
+                $sql = "SELECT nome_user FROM usuario WHERE nome_user = :nome_user";
                 $stmt = $conexao->prepare($sql);
-                $stmt->bindParam(":email", $userEmail);
+                $stmt->bindParam(":nome_user", $user);
                 $result = $stmt->execute();
                 $linha = $stmt->fetch();
 
@@ -54,14 +54,14 @@
         }
 
         public function autenticaLogin(Usuario $user){
-            $userEmail = $user->getEmail();
-            $userSenha = $user->getSenha();
+            $user = $user->getUser();
+            //$senha = $user->getSenha();
             try{
-                $conexao = $this->connect->conecta();
-                $sql = "SELECT email, senha FROM usuario WHERE email = :email AND senha = :senha";
+                $conexao = $this->conexaoDao->conecta();
+                $sql = "SELECT * FROM usuario WHERE nome_usuario = :nome_usuario";
                 $stmt = $conexao->prepare($sql);
-                $stmt->bindParam(":email", $userEmail);
-                $stmt->bindParam(":senha", $userSenha);
+                $stmt->bindParam(":nome_usuario", $user);
+                //$stmt->bindParam(":senha", $senha);
                 $result = $stmt->execute();
 
                 $linha = $stmt->fetch();

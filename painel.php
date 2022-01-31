@@ -1,4 +1,10 @@
 <?php
+    session_start();
+
+    if(!isset($_SESSION["user"])){
+        header("Location: index.php?msg=1");
+    }
+
     require_once("dao/SolicitacaoDao.php");
     require_once("dao/ClienteDao.php");
     require_once("control/SolicitacaoControl.php");
@@ -167,7 +173,7 @@
                 </ul>      
             </nav>
             <ul id="list-logout">
-                    <img src="imagens/logout.png" alt="logout.png">
+                    <a href="logout.php"><img src="imagens/logout.png" alt="logout.png"></a>
             </ul>   
         </header>
         <div class="content" id="content">
