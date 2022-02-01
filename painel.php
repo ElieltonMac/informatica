@@ -10,14 +10,17 @@
     require_once("dao/UsuarioDao.php");
     require_once("control/SolicitacaoControl.php");
     require_once("control/ClienteControl.php");
+    require_once("control/UsuarioControl.php");
     require_once("model/Solicitacao.php");
     require_once("model/Cliente.php");
+    require_once("model/Usuario.php");
     
     $solicitacaoControl = new SolicitacaoControl();
     $clienteControl = new ClienteControl();
     $solicitacaoDao = new SolicitacaoDao(); 
     $clienteDao = new ClienteDao();
     $usuarioDao = new UsuarioDao();
+    $usuarioControl = new UsuarioControl();
 
     $msg = "";
 
@@ -144,6 +147,13 @@
         $cliente->setIdCliente(strip_tags(filter_input(INPUT_POST, "idcliente", FILTER_SANITIZE_STRING)));
 
         $retorno = $clienteDao->excluiCliente($cliente);
+    }
+
+    if(filter_input(INPUT_POST, "user", FILTER_SANITIZE_STRING)){
+        $usuario = new Usuario();
+        $usuario->setUser(strip_tags(filter_input(INPUT_POST, "user", FILTER_SANITIZE_STRING)));
+
+        $resultado = $usuarioDao->excluiUsuario($usuario);
     }
 
 

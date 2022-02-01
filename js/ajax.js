@@ -52,3 +52,16 @@ function excluirCliente(){
         location.href="/informatica/painel.php?pagina=lista-clientes";
     })
 }
+
+var userNome = document.getElementById("id-usuario");
+function excluirUsuario(){
+    $.ajax({
+        method: "POST",
+        url: "/informatica/painel.php",
+        data: {user: userNome.value}
+    })
+    .done(function(){
+        alert("Usuario excluido com sucesso");
+        location.href="/informatica/painel.php?pagina=lista-usuarios";
+    })
+}

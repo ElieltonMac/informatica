@@ -8,7 +8,7 @@
             $this->usuarioDao = new UsuarioDao();
         }
 
-        public function validaCadastro(Usuario $user){
+        public function validaCadastro(Usuario $user, $tipo){
             if(strlen($user->getNome()) > 3 && strlen($user->getSenha()) > 7){
                 $senha = md5($user->getSenha());
                 $senha = substr_replace($senha, "e", 13, 0);
@@ -16,20 +16,27 @@
 
                 $user->setSenha($senha);
 
-                $resultado = $this->usuarioDao->consultaCad($user);
+                if($tipo == 1){
+                    $resultado = $this->usuarioDao->consultaCad($user);
 
-                switch($resultado){
-                    case 1:
-                        if($this->usuarioDao->cadastraUser($user) == 1){
-                            return 1;
-                        }else{
-                            return -2;
-                        }
-                    break;
-                    case -1:
-                        return -1;
-                    break;
+                    switch($resultado){
+                        case 1:
+                            if($this->usuarioDao->cadastraUser($user) == 1){
+                                return 1;
+                            }else{
+                                return -2;
+                            }
+                        break;
+                        case -1:
+                            return -1;
+                        break;
+                    }
+
+                }elseif($tipo == 2){
+                    
                 }
+
+                
             }else{
                 return -3;
             }

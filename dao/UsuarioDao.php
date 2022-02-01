@@ -112,5 +112,24 @@
                 echo "Erro: ". $ex->getMessage();
             }
         }
+
+        public function excluiUsuario(Usuario $usuario){
+            $user = $usuario->getUser();
+            try{
+                $conexao = $this->conexaoDao->conecta();
+                $sql = "DELETE FROM usuario WHERE nome_usuario = :nome_usuario";
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindParam(":nome_usuario", $user);
+                $result = $stmt->execute();
+
+                if($result){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            }catch(PDOException $ex){
+                echo "Erro: ". $ex->getMessage();
+            }
+        }
     }
 ?>

@@ -15,7 +15,7 @@
             <div class="default-flex form-buttons-altera-usuario">
                 <input type="submit" id="btn-salvar-altera-usuario" class="btn-form-altera-usuario" name="btn-altera-cliente" value="Salvar">
                 <a class="btn-form-altera-usuario" href="?pagina=lista-usuario"><input id="btn-voltar-usuario" type="button" value="Voltar"></a>
-                <input class="btn-form-altera-usuario" id="btn-excluir-usuario" type="button" name="btn-excluir-usuario" value="Excluir" onClick="excluirCliente()">
+                <input class="btn-form-altera-usuario" id="btn-excluir-usuario" type="button" name="btn-excluir-usuario" value="Excluir" onClick="excluirUsuario()">
             </div>
         </form>
     </div>
