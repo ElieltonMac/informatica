@@ -57,13 +57,14 @@
         margin-top: 20px;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
     .btn-form-altera-usuario{
         width: 140px;
         height: 40px;
+        margin-right: 3%;
         font-size: 0.9em;
         border: none;
         border-radius: 5px;

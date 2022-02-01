@@ -13,8 +13,8 @@
                 <label for="nova-senha-usuario">Nova Senha</label><input id="nova-senha-usuario" type="text" name="nova-senha-usuario">
             </div>
             <div class="default-flex form-buttons-altera-usuario">
-                <input type="submit" id="btn-salvar-altera-usuario" class="btn-form-altera-usuario" name="btn-altera-cliente" value="Salvar">
-                <a class="btn-form-altera-usuario" href="?pagina=lista-usuario"><input id="btn-voltar-usuario" type="button" value="Voltar"></a>
+                <!--<input type="submit" id="btn-salvar-altera-usuario" class="btn-form-altera-usuario" name="btn-altera-cliente" value="Salvar">-->
+                <a class="btn-form-altera-usuario" href="?pagina=lista-usuarios"><input id="btn-voltar-usuario" type="button" value="Voltar"></a>
                 <input class="btn-form-altera-usuario" id="btn-excluir-usuario" type="button" name="btn-excluir-usuario" value="Excluir" onClick="excluirUsuario()">
             </div>
         </form>
