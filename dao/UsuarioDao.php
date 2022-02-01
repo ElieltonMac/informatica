@@ -77,7 +77,7 @@
         public function retornaUsuarios(){
             try{
                 $conexao = $this->conexaoDao->conecta();
-                $sql = "SELECT * FROM usuario";
+                $sql = "SELECT * FROM usuario ORDER BY nome_usuario";
                 $stmt = $conexao->prepare($sql);
                 $result = $stmt->execute();
                 
