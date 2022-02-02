@@ -149,11 +149,35 @@
         $retorno = $clienteDao->excluiCliente($cliente);
     }
 
+    if(filter_input(INPUT_POST, "btn-cad-user", FILTER_SANITIZE_STRING)){
+        $usuario = new Usuario();
+
+        $usuario->setUser(strip_tags(filter_input(INPUT_POST, "usuario", FILTER_SANITIZE_STRING)));
+        $usuario->setSenha(strip_tags(filter_input(INPUT_POST, "senha", FILTER_SANITIZE_STRING)));
+
+        $retorno = $usuarioControl->validaCadastro($usuario);
+
+        switch($retorno){
+            case 1:
+                $msg = "Cadastrado com sucesso";
+            break;
+            case -1:
+                $msg = "Este usuário já existe";
+            break;
+            case -2:
+                $msg = "Erro ao cadastrar";
+            break;
+            case -3:
+                $msg = "Usuario deve ter min 4 caracteres e senha min 8 caracteres";
+            break;
+        }
+    }
+
     if(filter_input(INPUT_POST, "user", FILTER_SANITIZE_STRING)){
         $usuario = new Usuario();
         $usuario->setUser(strip_tags(filter_input(INPUT_POST, "user", FILTER_SANITIZE_STRING)));
 
-        $resultado = $usuarioDao->excluiUsuario($usuario);
+        $retorno = $usuarioDao->excluiUsuario($usuario);
     }
 
 
@@ -176,6 +200,7 @@
     <link rel="stylesheet" href="css/cliente.css">
     <link rel="stylesheet" href="css/lista-usuarios.css">
     <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/cadastrar-usuario.css">
     <script type="text/javascript" src="js/jquery-3.6.0.min"></script>
 </head>
 <body>
@@ -226,6 +251,9 @@
                     break;
                     case "usuario":
                         require_once("view/usuario.php");
+                    break;
+                    case "cadastrar-usuario":
+                        require_once("view/cadastrar-usuario.php");
                     break;
                 }       
             ?>  

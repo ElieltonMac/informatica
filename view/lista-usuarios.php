@@ -4,6 +4,11 @@
 
 <div class="default-flex container-lista-usuario">
     <div class="default-flex box-lista-usuario">
+        <div class="default-flex row-add-user">
+            <div class="default-flex box-icon-add">
+                <a href="?pagina=cadastrar-usuario"><img src="/informatica/imagens/adicionar.png"></a>
+            </div>  
+        </div>
         <table class="usuario-table">
             <tr id="cabecalho">
                 <th>USUARIO</th>

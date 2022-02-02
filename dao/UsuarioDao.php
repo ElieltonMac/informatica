@@ -10,13 +10,15 @@
         public function cadastraUser(Usuario $usuario){
             $userNome = $usuario->getUser();
             $userSenha = $usuario->getSenha();
+            $tipo = $usuario->getTipo();
             try{
                 $conexao = $this->conexaoDao->conecta();
 
-                $sql = "INSERT INTO usuario(nome_usuario, senha) VALUES (:nome_usuario, :senha)";
+                $sql = "INSERT INTO usuario(nome_usuario, senha, tipo_usuario) VALUES (:nome_usuario, :senha, :tipo_usuario)";
                 $stmt = $conexao->prepare($sql);
                 $stmt->bindParam(":nome_usuario", $userNome);
                 $stmt->bindParam(":senha", $userSenha);
+                $stmt->bindParam(":tipo_usuario", $tipo);
 
                 $result = $stmt->execute();
 
@@ -31,20 +33,20 @@
         }
 
         public function consultaCad(Usuario $usuario){
-            $user = $usuario->getEmail();
+            $user = $usuario->getUser();
             try{
                 $conexao = $this->conexaoDao->conecta();
 
-                $sql = "SELECT nome_user FROM usuario WHERE nome_user = :nome_user";
+                $sql = "SELECT nome_usuario FROM usuario WHERE nome_usuario = :nome_usuario";
                 $stmt = $conexao->prepare($sql);
-                $stmt->bindParam(":nome_user", $user);
+                $stmt->bindParam(":nome_usuario", $user);
                 $result = $stmt->execute();
                 $linha = $stmt->fetch();
 
                 if(empty($linha)){
                     return 1;
                 }else{
-                    return -1;
+                    return -1; //usuario já existe
                 }
             }catch(PDOException $ex){
 
