@@ -144,7 +144,7 @@
 
     if(filter_input(INPUT_POST, "idcliente", FILTER_SANITIZE_STRING)){
         $cliente = new Cliente();
-        $cliente->setIdCliente(strip_tags(filter_input(INPUT_POST, "idcliente", FILTER_SANITIZE_STRING)));
+        $cliente->setId(strip_tags(filter_input(INPUT_POST, "idcliente", FILTER_SANITIZE_STRING)));
 
         $retorno = $clienteDao->excluiCliente($cliente);
     }

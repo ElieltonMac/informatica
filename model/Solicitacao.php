@@ -126,7 +126,7 @@
         }
 
         public function setCliente($id){
-            $this->cliente->setIdCliente($id);
+            $this->cliente->setId($id);
         }
 
         public function setAtendente($id){
